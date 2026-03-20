@@ -141,6 +141,8 @@ Ouvrez **http://localhost** dans un navigateur. L'interface permet de :
 
 ### Via curl (API REST)
 
+> **Note Windows (PowerShell) :** Sur PowerShell, `curl` est un alias de la commande Windows `Invoke-WebRequest` et non le vrai `curl`. Il faut donc utiliser `curl.exe` suivi de `--%%` pour forcer PowerShell à ne pas interpréter les guillemets et les espaces dans le JSON (sans cela, la commande échoue avec une erreur de parsing).
+
 #### Créer une tâche
 
 **Linux / macOS :**
@@ -152,7 +154,7 @@ curl -X POST http://localhost/tasks \
 
 **Windows (PowerShell) :**
 ```powershell
-curl -X POST http://localhost/tasks -H "Content-Type: application/json" -d '{"title": "Ma premiere tache"}'
+curl.exe --% -X POST http://localhost/tasks -H "Content-Type: application/json" -d "{\"title\": \"Ma premiere tache\"}"
 ```
 
 #### Lister toutes les tâches
@@ -175,7 +177,7 @@ curl -X PUT http://localhost/tasks/1 \
 
 **Windows (PowerShell) :**
 ```powershell
-curl -X PUT http://localhost/tasks/1 -H "Content-Type: application/json" -d '{"done": true}'
+curl.exe --% -X PUT http://localhost/tasks/1 -H "Content-Type: application/json" -d "{\"done\": true}"
 ```
 
 #### Supprimer une tâche
