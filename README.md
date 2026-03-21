@@ -25,7 +25,9 @@ Stack : **React · Node.js · PostgreSQL · Redis · Nginx**
 ```
 
 ```
-![Architecture du projet](architecture.png)
+## Architecture
+
+![Architecture du projet](images/architecture.png)
 ```
 
 ```
