@@ -22,11 +22,11 @@ Stack : **React · Node.js · PostgreSQL · Redis · Nginx**
 
 ## Architecture
 
-```
-![Architecture du projet](images/architecture.png)
-```
 
-```
+![Architecture du projet](images/architecture.png)
+
+
+
 
 Le seul port exposé vers l'extérieur est le **port 80** (Nginx). Les autres services (API, base de données, cache) sont isolés dans le réseau interne Docker et ne sont pas accessibles directement depuis la machine hôte.
 
