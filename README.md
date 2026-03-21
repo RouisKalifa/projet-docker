@@ -23,21 +23,9 @@ Stack : **React · Node.js · PostgreSQL · Redis · Nginx**
 ## Architecture
 
 ```
-                        ┌─────────────────────────────────────┐
-                        │           Docker Network             │
-                        │            todo_network              │
-                        │                                      │
-  Client (navigateur)   │   ┌─────────┐     ┌─────────────┐  │
-        │               │   │         │────▶ │   frontend  │  │
-        ▼               │   │         │     │  React/Vite │  │
-  ┌──────────┐          │   │  nginx  │     └─────────────┘  │
-  │  :80     │──────────┼──▶│ reverse │                       │
-  └──────────┘          │   │  proxy  │     ┌─────────────┐  │
-                        │   │         │────▶ │     api     │  │
-                        │   └─────────┘     │  Node.js    │──┼──▶ PostgreSQL
-                        │                   └─────────────┘  │        +
-                        │                                     │      Redis
-                        └─────────────────────────────────────┘
+
+<img width="617" height="525" alt="image" src="https://github.com/user-attachments/assets/b81d5270-1934-4a1d-a849-edc7b74dc9df" />
+
 ```
 
 Le seul port exposé vers l'extérieur est le **port 80** (Nginx). Les autres services (API, base de données, cache) sont isolés dans le réseau interne Docker et ne sont pas accessibles directement depuis la machine hôte.
