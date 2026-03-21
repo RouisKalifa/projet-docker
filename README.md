@@ -147,8 +147,14 @@ curl.exe --% -X POST http://localhost/tasks -H "Content-Type: application/json" 
 
 #### Lister toutes les tâches
 
+**Linux / macOS :**
 ```bash
 curl http://localhost/tasks
+```
+
+**Windows (PowerShell) :**
+```powershell
+curl.exe http://localhost/tasks
 ```
 
 > La réponse indique `"source": "cache"` (Redis) ou `"source": "db"` (PostgreSQL).
@@ -170,14 +176,26 @@ curl.exe --% -X PUT http://localhost/tasks/1 -H "Content-Type: application/json"
 
 #### Supprimer une tâche
 
+**Linux / macOS :**
 ```bash
 curl -X DELETE http://localhost/tasks/1
 ```
 
+**Windows (PowerShell) :**
+```powershell
+curl.exe -X DELETE http://localhost/tasks/1
+```
+
 #### Vérifier l'état de l'API
 
+**Linux / macOS :**
 ```bash
 curl http://localhost/health
+```
+
+**Windows (PowerShell) :**
+```powershell
+curl.exe http://localhost/health
 ```
 
 ---
