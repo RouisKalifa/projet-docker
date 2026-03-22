@@ -125,11 +125,11 @@ Ouvrez **http://localhost** dans un navigateur. L'interface permet de :
 - Ajouter une tâche
 - Cocher / décocher une tâche
 - Supprimer une tâche
-- Voir si la donnée vient du cache Redis (⚡) ou de PostgreSQL (🗄️)
+- Voir si la donnée vient du cache Redis ou de PostgreSQL
 
-### Via Postman (alternative recommandée sur Windows)
+### Via Postman
 
-[Postman](https://www.postman.com/downloads/) est une interface graphique pour tester des APIs REST. C'est plus simple que curl, surtout sur Windows.
+[Postman](https://www.postman.com/downloads/) est une interface graphique pour tester des APIs REST. C'est plus simple que curl.
 
 | Méthode | URL | Body (JSON) |
 |---|---|---|
@@ -144,7 +144,6 @@ Pour les requêtes POST et PUT, sélectionnez `Body` → `raw` → `JSON` dans P
 
 ### Via curl (API REST)
 
-> **Note Windows (PowerShell) :** Sur PowerShell, `curl` est un alias de la commande Windows `Invoke-WebRequest` et non le vrai `curl`. Il faut donc utiliser `curl.exe` suivi de `--%%` pour forcer PowerShell à ne pas interpréter les guillemets et les espaces dans le JSON (sans cela, la commande échoue avec une erreur de parsing).
 
 #### Créer une tâche
 
