@@ -89,7 +89,7 @@ copy .env.example .env
 ### 3. Démarrer tous les services
 
 ```bash
-docker compose up --build
+sudo docker compose up --build
 ```
 
 Cette commande fait plusieurs choses automatiquement :
