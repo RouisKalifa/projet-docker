@@ -48,12 +48,12 @@ Le seul port exposé vers l'extérieur est le **port 80** (Nginx). Les autres se
 
 ## Prérequis
 
-- [Docker]) installé
+- Docker installé
 - Git
 
 ### Installer Docker si nécessaire
 
-**Windows / macOS :**
+**Windows :**
 Téléchargez et installez [Docker Desktop](https://www.docker.com/products/docker-desktop/).
 
 **Linux (Ubuntu) :**
