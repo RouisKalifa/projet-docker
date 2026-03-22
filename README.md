@@ -77,8 +77,7 @@ sudo apt install docker-compose-v2 -y
 
 Avant de lancer le projet, vérifiez que Docker est bien actif :
 
-- **Windows / macOS** : ouvrez l'application **Docker Desktop** et attendez que l'icône soit verte
-- **Linux** : lancez la commande suivante si Docker n'est pas déjà actif :
+
   ```bash
   sudo systemctl start docker
   ```
