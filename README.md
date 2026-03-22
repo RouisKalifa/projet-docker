@@ -71,6 +71,11 @@ Vérifiez que Docker est bien installé :
 docker --version
 ```
 
+Si la commande `docker compose` n'est pas reconnue, installez le plugin :
+```bash
+sudo apt install docker-compose-v2 -y
+```
+
 ### S'assurer que Docker est démarré
 
 Avant de lancer le projet, vérifiez que Docker est bien actif :
