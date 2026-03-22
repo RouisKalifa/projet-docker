@@ -16,7 +16,7 @@ Stack : **React · Node.js · PostgreSQL · Redis · Nginx**
 | Multi-stage build | Dockerfiles `api` et `frontend` utilisent un multi-stage build |
 | Au moins 2 conteneurs qui communiquent | Tous les services communiquent via un réseau Docker dédié |
 | docker-compose.yaml | Présent avec healthchecks, volumes, réseau custom, depends_on |
-| Lancement simple | `docker compose up --build` suffit |
+| Lancement simple | `sudo docker compose up --build` suffit |
 
 ---
 
