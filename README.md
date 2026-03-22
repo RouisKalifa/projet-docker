@@ -61,11 +61,8 @@ Téléchargez et installez [Docker Desktop](https://www.docker.com/products/dock
 sudo apt update
 sudo apt install docker.io git -y
 sudo systemctl start docker
-sudo systemctl enable docker
-sudo usermod -aG docker $USER
-```
-> Fermez et rouvrez le terminal après la dernière commande pour que les droits soient pris en compte.
 
+```
 Vérifiez que Docker est bien installé :
 ```bash
 docker --version
