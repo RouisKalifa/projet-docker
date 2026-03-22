@@ -113,7 +113,23 @@ copy .env.example .env
 
 > Aucune modification n'est nécessaire, les valeurs par défaut fonctionnent directement.
 
-### 3. Démarrer tous les services
+### 3. Vérifier que le port 80 est disponible
+
+Le projet utilise le port **80** pour Nginx. Si ce port est déjà utilisé par un autre service, le démarrage échouera.
+
+Pour vérifier sur **Linux / macOS** :
+```bash
+sudo lsof -i :80
+```
+
+Pour vérifier sur **Windows (PowerShell)** :
+```powershell
+netstat -ano | findstr :80
+```
+
+Si un processus utilise déjà ce port, arrêtez-le avant de continuer.
+
+### 4. Démarrer tous les services
 
 ```bash
 sudo docker compose up --build
@@ -130,13 +146,13 @@ La première exécution prend quelques minutes (téléchargement + compilation R
 
 L'application est disponible sur **http://localhost**
 
-### Arrêter les services
+### 5. Arrêter les services
 
 ```bash
 docker compose down
 ```
 
-### Supprimer les données persistantes (volumes)
+### 6. Supprimer les données persistantes (volumes)
 
 ```bash
 docker compose down -v
