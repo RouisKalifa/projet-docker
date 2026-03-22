@@ -51,6 +51,26 @@ Le seul port exposé vers l'extérieur est le **port 80** (Nginx). Les autres se
 - [Docker]) installé
 - Git
 
+### Installer Docker si nécessaire
+
+**Windows / macOS :**
+Téléchargez et installez [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+
+**Linux (Ubuntu) :**
+```bash
+sudo apt update
+sudo apt install docker.io git -y
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker $USER
+```
+> Fermez et rouvrez le terminal après la dernière commande pour que les droits soient pris en compte.
+
+Vérifiez que Docker est bien installé :
+```bash
+docker --version
+```
+
 ### S'assurer que Docker est démarré
 
 Avant de lancer le projet, vérifiez que Docker est bien actif :
@@ -460,6 +480,58 @@ projet-docker/
 └── nginx/                    # Reverse proxy
     ├── Dockerfile
     └── nginx.conf            # Routing + headers de sécurité
+```
+
+---
+
+## Commandes utiles
+
+### Voir tous les conteneurs et leur statut
+```bash
+docker compose ps
+```
+
+### Voir les logs d'un service en temps réel
+```bash
+docker compose logs -f api       # logs de l'API
+docker compose logs -f nginx     # logs de Nginx
+docker compose logs -f postgres  # logs de PostgreSQL
+```
+
+### Redémarrer un seul service
+```bash
+docker compose restart api
+```
+
+### Voir l'utilisation CPU et mémoire de chaque conteneur
+```bash
+docker stats
+```
+
+### Entrer dans un conteneur
+```bash
+docker exec -it todo_api sh        # entrer dans le conteneur de l'API
+docker exec -it todo_nginx sh      # entrer dans le conteneur Nginx
+```
+
+### Voir les images Docker construites
+```bash
+docker images
+```
+
+### Voir les volumes Docker
+```bash
+docker volume ls
+```
+
+### Tout arrêter et supprimer les conteneurs
+```bash
+docker compose down
+```
+
+### Tout arrêter et supprimer les conteneurs + les données
+```bash
+docker compose down -v
 ```
 
 ---
